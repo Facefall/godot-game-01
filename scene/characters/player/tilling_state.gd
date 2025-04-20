@@ -15,15 +15,15 @@ func _on_next_transitions() -> void:
 
 func _on_enter() -> void:
 	if player.player_direction == Vector2.UP:
-		animated_sprite_2d.play("chopping_back")
+		animated_sprite_2d.play("tiling_back")
 	elif player.player_direction == Vector2.DOWN:
-		animated_sprite_2d.play("chopping_front")
+		animated_sprite_2d.play("tiling_front")
 	elif player.player_direction == Vector2.LEFT:
-		animated_sprite_2d.play("chopping_left")
+		animated_sprite_2d.play("tiling_left")
 	elif player.player_direction == Vector2.RIGHT:
-		animated_sprite_2d.play("chopping_right") 
+		animated_sprite_2d.play("tiling_right") 
 	else:
-		animated_sprite_2d.play("chopping_front")   
+		animated_sprite_2d.play("tiling_front")   
 
 func _on_exit() -> void:
 		animated_sprite_2d.stop()
