@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://5la22uussmdr" path="res://Tilesets/game_tile_set.tres" id="1_or6t2"]
 [ext_resource type="PackedScene" uid="uid://x1vfwc65noxp" path="res://scene/characters/player/player.tscn" id="2_t2whe"]
 
-[node name="TestSceneTileMap" type="Node2D"]
+[node name="TestSceneHouseTileMap" type="Node2D"]
 scale = Vector2(1, 0.99748)
 
 [node name="GameTileMap" type="Node2D" parent="."]

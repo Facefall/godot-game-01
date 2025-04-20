@@ -395,9 +395,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o83rq"]
-radius = 8.0
+radius = 6.0
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_8nhx4")
 current_tool = 3
 
@@ -408,7 +409,7 @@ animation = &"watering_right"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_o83rq")
 
 [node name="Nature" type="TileMapLayer" parent="CollisionShape2D"]
