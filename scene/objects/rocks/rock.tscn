@@ -1,21 +1,30 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4tpwlntyywrl"]
+[gd_scene load_steps=10 format=3 uid="uid://b4tpwlntyywrl"]
 
 [ext_resource type="Texture2D" uid="uid://2wumosvba4pc" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_yie7p"]
 [ext_resource type="Script" uid="uid://e2464ve2pntk" path="res://scene/objects/rocks/rock.gd" id="2_brr5l"]
 [ext_resource type="PackedScene" uid="uid://mmuyl2veq282" path="res://scene/components/hurt_component.tscn" id="2_kwliq"]
 [ext_resource type="PackedScene" uid="uid://dcjdsgttnijsf" path="res://scene/components/damage_component.tscn" id="3_brr5l"]
+[ext_resource type="Shader" uid="uid://077gxhdvkt8d" path="res://scene/objects/rocks/shake.gdshader" id="3_s33kw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_brr5l"]
+resource_local_to_scene = true
+shader = ExtResource("3_s33kw")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7s71h"]
 atlas = ExtResource("1_yie7p")
 region = Rect2(128, 16, 16, 16)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h74uy"]
-radius = 5.09902
+radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jraf6"]
-radius = 7.0
+radius = 8.0
 
 [node name="Rock" type="Sprite2D"]
+material = SubResource("ShaderMaterial_brr5l")
+position = Vector2(0, -3)
 texture = SubResource("AtlasTexture_7s71h")
 script = ExtResource("2_brr5l")
 
