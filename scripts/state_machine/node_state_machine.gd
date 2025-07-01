@@ -2,6 +2,7 @@ class_name NodeStateMachine
 extends Node
 
 @export var initial_node_state : NodeState
+@export var node_item : DataTypes.Items = DataTypes.Items.None
 
 var node_states : Dictionary = {}
 var current_node_state : NodeState
@@ -17,18 +18,19 @@ func _ready() -> void:
 	if initial_node_state:
 		initial_node_state._on_enter()
 		current_node_state = initial_node_state
-
-
+		current_node_state_name = current_node_state.name.to_lower()
+		
 func _process(delta : float) -> void:
 	if current_node_state:
 		current_node_state._on_process(delta)
-
 
 func _physics_process(delta: float) -> void:
 	if current_node_state:
 		current_node_state._on_physics_process(delta)
 		current_node_state._on_next_transitions()
-		#print("Current State: ", current_node_state_name)
+		
+		if node_item == DataTypes.Items.Chicken:
+			print( "Item:", node_item ," Current State: ", current_node_state_name)
 
 
 func transition_to(node_state_name : String) -> void:

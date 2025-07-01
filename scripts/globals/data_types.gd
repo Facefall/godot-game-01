@@ -7,3 +7,10 @@ enum Tools {
 	WaterCrops,
 	PlantTomato
 }
+
+enum Items {
+	None,
+	Chicken,
+	Player,
+	NPC
+}

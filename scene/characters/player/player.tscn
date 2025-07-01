@@ -409,10 +409,8 @@ current_tool = 1
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_stjjq")
-animation = &"chopping_right"
+animation = &"tiling_back"
 autoplay = "idle_front"
-frame = 1
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
@@ -424,6 +422,7 @@ tile_set = ExtResource("3_ekqmh")
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("5_wf2u3")
 initial_node_state = NodePath("Idle")
+node_item = 2
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("5_v7krq")
