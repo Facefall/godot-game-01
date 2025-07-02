@@ -11,6 +11,7 @@ enum Tools {
 enum Items {
 	None,
 	Chicken,
+	COW,
 	Player,
 	NPC
 }
