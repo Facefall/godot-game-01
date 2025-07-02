@@ -1,13 +1,20 @@
-[gd_scene load_steps=5 format=4 uid="uid://buxe3sh8db1u0"]
+[gd_scene load_steps=7 format=4 uid="uid://buxe3sh8db1u0"]
 
 [ext_resource type="TileSet" uid="uid://5la22uussmdr" path="res://Tilesets/game_tile_set.tres" id="1_jmk3d"]
 [ext_resource type="PackedScene" uid="uid://x1vfwc65noxp" path="res://scene/characters/player/player.tscn" id="2_iqu0b"]
+[ext_resource type="PackedScene" uid="uid://bg63agf34uyfa" path="res://scene/characters/cow/cow.tscn" id="3_ba474"]
 [ext_resource type="PackedScene" uid="uid://drq422i15tlbi" path="res://scene/characters/chicken/chicken.tscn" id="3_jmk3d"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_f6des"]
 vertices = PackedVector2Array(226.773, 247.031, 226.383, 230, 277, 230, 454.93, 247.953, 389, 230, 389, 113.703, 454.063, 113.961, 277, 198, 229, 198, 229, 118, 278, 118, 278, 122, 283, 122, 283, 182, 309, 182, 309, 122, 314, 122, 363, 198, 315, 198, 314, 118, 363, 118, 315, 230)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 3), PackedInt32Array(7, 8, 9, 10, 11), PackedInt32Array(11, 12, 13, 7), PackedInt32Array(14, 15, 16, 17, 18), PackedInt32Array(16, 19, 20, 17), PackedInt32Array(2, 7, 13, 14, 18, 21), PackedInt32Array(3, 2, 21), PackedInt32Array(4, 3, 21)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(216, 214, 217, 257, 465, 258, 464, 104, 216, 103)])
+source_geometry_mode = 2
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_iqu0b"]
+vertices = PackedVector2Array(155, 150, 155, 158.75, 117, 155.75, 149, 150, 187, 38, 187, 54, 171, 54, 149, 38, 171, 150, 123, 150, 117, 150, 123, 70, 53, 150, 53, 70)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(3, 7, 6, 0), PackedInt32Array(6, 8, 0), PackedInt32Array(9, 3, 2), PackedInt32Array(9, 2, 10, 11), PackedInt32Array(10, 12, 13, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(107, 165, 40, 167, 38, 55, 138, 55, 134, 18, 199, 20, 202, 70, 183, 72, 183, 171)])
 source_geometry_mode = 2
 
 [node name="TestSceneNPCNavigation" type="Node2D"]
@@ -33,7 +40,7 @@ y_sort_enabled = true
 tile_set = ExtResource("1_jmk3d")
 
 [node name="Objects" type="TileMapLayer" parent="GameTileMap" groups=["navigation_polygon_source_geometry_group"]]
-tile_map_data = PackedByteArray("AAAUAAYABQACAAMAAAATAAYABQACAAIAAAASAAYABQACAAEAAAARAAYABQACAAIAAAAQAAYABQACAAIAAAAPAAYABQACAAMAAAAOAAYABQACAAIAAAANAAYABQABAAAAAAANAAoABQAAAAEAAAANAAkABQAAAAEAAAANAAgABQAAAAEAAAANAAcABQAAAAEAAAAWAAYABQACAAIAAAAVAAYABQACAAIAAAASAAgABQAAAAEAAAASAAcABQAAAAEAAAAXAAYABQADAAAAAAAXAAoABQAAAAEAAAAXAAkABQAAAAEAAAAXAAgABQAAAAEAAAAXAAcABQAAAAEAAAANAAwABQAAAAEAAAANAAsABQAAAAEAAAAXAAwABQAAAAEAAAAXAAsABQAAAAEAAAANAA0ABQABAAIAAAAXAA0ABQADAAIAAAAVAA0ABQACAAMAAAAWAA0ABQACAAMAAAAOAA0ABQACAAMAAAAPAA0ABQACAAMAAAAQAA0ABQADAAMAAAAUAA0ABQABAAMAAAASAAkABQAAAAEAAAASAAoABQAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAUAAYABQACAAMAAAATAAYABQACAAIAAAASAAYABQACAAEAAAARAAYABQACAAIAAAAQAAYABQACAAIAAAAPAAYABQACAAMAAAAOAAYABQACAAIAAAANAAYABQABAAAAAAANAAoABQAAAAEAAAANAAkABQAAAAEAAAANAAgABQAAAAEAAAANAAcABQAAAAEAAAAWAAYABQACAAIAAAAVAAYABQACAAIAAAASAAgABQAAAAEAAAASAAcABQAAAAEAAAAXAAYABQADAAAAAAAXAAoABQAAAAEAAAAXAAkABQAAAAEAAAAXAAgABQAAAAEAAAAXAAcABQAAAAEAAAANAAwABQAAAAEAAAANAAsABQAAAAEAAAAXAAwABQAAAAEAAAAXAAsABQAAAAEAAAANAA0ABQABAAIAAAAXAA0ABQADAAIAAAAVAA0ABQACAAMAAAAWAA0ABQACAAMAAAAOAA0ABQACAAMAAAAPAA0ABQACAAMAAAAQAA0ABQADAAMAAAAUAA0ABQABAAMAAAASAAkABQAAAAEAAAASAAoABQAAAAIAAAACAAMABQABAAAAAAACAAQABQAAAAEAAAACAAUABQAAAAEAAAACAAYABQAAAAEAAAACAAcABQAAAAEAAAACAAgABQAAAAEAAAACAAkABQAAAAEAAAACAAoABQABAAIAAAAHAAMABQACAAMAAAAGAAMABQACAAMAAAAFAAMABQACAAMAAAAEAAMABQACAAMAAAADAAMABQACAAMAAAAIAAMABQADAAEAAAAIAAEABQABAAAAAAAIAAIABQAAAAEAAAALAAEABQACAAMAAAAKAAEABQACAAMAAAAJAAEABQACAAMAAAAMAAEABQADAAAAAAAMAAMABQAAAAEAAAAMAAIABQAAAAEAAAAMAAQABQADAAIAAAALAAQABQABAAAAAAALAAcABQAAAAEAAAALAAYABQAAAAEAAAALAAUABQAAAAEAAAALAAkABQAAAAEAAAALAAgABQAAAAEAAAALAAoABQADAAEAAAAKAAoABQABAAMAAAAGAAoABQADAAMAAAAFAAoABQACAAMAAAAEAAoABQACAAMAAAADAAoABQACAAMAAAAIAAUABQAAAAEAAAAIAAQABQAAAAEAAAAIAAcABQAAAAEAAAAIAAYABQAAAAEAAAAIAAgABQAAAAIAAAA=")
 tile_set = ExtResource("1_jmk3d")
 
 [node name="Player" parent="." instance=ExtResource("2_iqu0b")]
@@ -68,3 +75,18 @@ position = Vector2(406, 219)
 
 [node name="Chicken8" parent="Chickens" instance=ExtResource("3_jmk3d")]
 position = Vector2(429, 214)
+
+[node name="Cows" type="Node2D" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Cows"]
+navigation_polygon = SubResource("NavigationPolygon_iqu0b")
+navigation_layers = 2
+
+[node name="Cow" parent="Cows" instance=ExtResource("3_ba474")]
+position = Vector2(61, 91)
+
+[node name="Cow2" parent="Cows" instance=ExtResource("3_ba474")]
+position = Vector2(99, 111)
+
+[node name="Cow3" parent="Cows" instance=ExtResource("3_ba474")]
+position = Vector2(169, 53)
