@@ -29,8 +29,8 @@ func _physics_process(delta: float) -> void:
 		current_node_state._on_physics_process(delta)
 		current_node_state._on_next_transitions()
 		
-		if node_item == DataTypes.Items.COW:
-			print( "Item:", node_item ," Current State: ", current_node_state_name)
+		#if node_item == DataTypes.Items.COW:
+			#print( "Item:", node_item ," Current State: ", current_node_state_name)
 
 
 func transition_to(node_state_name : String) -> void:
