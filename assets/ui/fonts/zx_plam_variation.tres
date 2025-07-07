@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://bdee5cn4vsenx"]
+
+[ext_resource type="FontFile" uid="uid://wat7o5yp402n" path="res://assets/ui/fonts/zx_plam.ttf" id="1_ymttr"]
+
+[resource]
+base_font = ExtResource("1_ymttr")
+spacing_glyph = -3
+spacing_top = 2
+spacing_bottom = 2
