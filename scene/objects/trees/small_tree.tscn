@@ -16,12 +16,13 @@ shader_parameter/shake_speed = 20.0
 radius = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7oi7y"]
-size = Vector2(10, 24.5)
+size = Vector2(10, 21.625)
 
 [node name="SmallTree" type="Sprite2D"]
 material = SubResource("ShaderMaterial_f4pa5")
-position = Vector2(0, -12)
+position = Vector2(0, -5)
 texture = ExtResource("1_ikprh")
+offset = Vector2(0, -5)
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 32)
 script = ExtResource("2_ouqst")
@@ -29,7 +30,7 @@ script = ExtResource("2_ouqst")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 8)
+position = Vector2(0, 3)
 scale = Vector2(1.00173, 1.01362)
 shape = SubResource("CircleShape2D_8srlo")
 
@@ -37,7 +38,8 @@ shape = SubResource("CircleShape2D_8srlo")
 tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
-position = Vector2(0, -1.25)
+y_sort_enabled = true
+position = Vector2(0, -6.1875)
 shape = SubResource("RectangleShape2D_7oi7y")
 debug_color = Color(0.616977, 0.367361, 0.979517, 0.42)
 

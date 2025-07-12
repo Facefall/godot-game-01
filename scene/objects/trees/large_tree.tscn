@@ -14,37 +14,33 @@ shader_parameter/shake_speed = 20.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_opobp"]
 atlas = ExtResource("2_gpemt")
-region = Rect2(0, 0, 32, 32)
-margin = Rect2(0, 2, 0, 0)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opobp"]
 resource_local_to_scene = true
 radius = 5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7oi7y"]
-size = Vector2(10, 24.5)
+size = Vector2(16, 24)
 
 [node name="LargeTree" type="Sprite2D"]
 material = SubResource("ShaderMaterial_opobp")
-position = Vector2(0, -10)
-scale = Vector2(1.4375, 1)
 texture = SubResource("AtlasTexture_opobp")
+offset = Vector2(0, -12)
 region_enabled = true
-region_rect = Rect2(0, 0, 16, 32)
+region_rect = Rect2(16, 0, 32, 32)
 script = ExtResource("3_opobp")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 8)
-scale = Vector2(1.00173, 1.01362)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_opobp")
 
 [node name="HurtComponent" parent="." instance=ExtResource("4_k0ivg")]
 tool = 1
 
 [node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
-position = Vector2(0.347826, 0)
+position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_7oi7y")
 debug_color = Color(0.616977, 0.367361, 0.979517, 0.42)
 

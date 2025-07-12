@@ -396,7 +396,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o83rq"]
-radius = 4.0
+radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a6bj1"]
 radius = 3.0
@@ -406,13 +406,14 @@ collision_layer = 2
 script = ExtResource("1_8nhx4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_stjjq")
 animation = &"idle_front"
 autoplay = "idle_front"
+offset = Vector2(0, -5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_o83rq")
 
 [node name="Nature" type="TileMapLayer" parent="CollisionShape2D"]
@@ -454,6 +455,6 @@ hit_component_collision_shape = NodePath("../../HitComponent/HitComponentCollisi
 [node name="HitComponent" parent="." instance=ExtResource("11_tg3vd")]
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent"]
-position = Vector2(9, 0)
+position = Vector2(0, -3)
 shape = SubResource("CircleShape2D_a6bj1")
 debug_color = Color(0.680013, 0.449035, 0.611555, 0.42)
