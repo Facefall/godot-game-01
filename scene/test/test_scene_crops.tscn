@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dkvw3r3l05ta5" path="res://scene/objects/plants/tomato.tscn" id="5_7warg"]
 [ext_resource type="PackedScene" uid="uid://cs207ucq12sfe" path="res://scene/objects/plants/corn.tscn" id="5_hf2to"]
 
-[node name="TestSceneDayAndNightCycle" type="Node2D"]
+[node name="TestSceneCrops" type="Node2D"]
 scale = Vector2(1, 0.99748)
 
 [node name="GameTileMap" type="Node2D" parent="."]
